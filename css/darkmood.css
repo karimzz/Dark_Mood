@@ -10,28 +10,32 @@
 
 :root{
     --mainColor : #ffffff ; 
-    --font-Color :  #000000;
-    --secondColor :#ff4320 ;
+    --font-color :  #000000;
+    --secondColor :#0075FF ;
 }
 
 .container{
     width: 80% ;
-    margin: 0 auto
+    margin: 0 auto;
+    max-width: 100%;
 }
 
-@media(max-width:767px)
-{
-    .container{
-        width: 100%
-    }
-}
+
 
 main{
     background-color: var(--mainColor) ;
     transition: .4s;
     height: 100vh;
+    overflow: hidden;
 }
 
+@media(max-width:767px)
+{
+    .container{
+        width: 100%;
+    }
+
+}
 /* End Global Rule */
 
 
@@ -45,6 +49,7 @@ nav{
     justify-content: space-between;
     align-items: center;
     padding: 15px ;
+    position: relative;
 }
 
 nav .links{
@@ -53,22 +58,74 @@ nav .links{
     list-style: none;
 }
 
+.menu img{
+    width: 30px;
+    height: 30px;
+}
+.menu{
+    display: none;
+
+}
+
 nav .links li{
     margin-right: 40px;
 }
 nav .logo{
-    color: var(--font-Color);
+    color: var(--font-color);
     cursor: pointer;
 }
 
 nav .links a{
     text-decoration: none;
-    color: var(--font-Color);
+    color: var(--font-color);
     transition: .4s;
 }
 
 nav .links a:hover{
     color: var(--secondColor);
+}
+
+@media(max-width:767px)
+{
+    nav .links{
+        visibility: hidden;
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        right: 0;
+        top: 100%;
+        background-color: var(--font-color);
+        width: 100%;
+        transition: .4s;
+    }
+    nav .links li{
+        text-align: center;
+        padding: 10px 0 ;
+        transition: .4s;
+        width: 100%;
+    }
+    nav .links li:hover{
+        padding-left: 30px;
+    }
+    nav .links li a{
+        text-align: center;
+        color: var(--mainColor);
+
+    }
+    .menu{
+        display: block;
+        position: relative;
+        cursor: pointer;
+    }
+    .mm{
+        font-weight: bold;
+        color: var(--font-color);
+    }
+
+    nav .show{
+        visibility: visible;
+        transition: .4s;
+    }
 }
 
 /* End Nav  */
@@ -98,10 +155,12 @@ nav .links a:hover{
 .landing .text h2{
     font-size: 33px;
     margin-bottom: 30px;
+    color: var(--font-color);
 }
 
 .landing .text p{
     font-weight: 300;
+    color: var(--font-color);
     
 }
 
@@ -112,7 +171,7 @@ nav .links a:hover{
     border: none;
     font-weight: bold;
     cursor: pointer;
-    background-color: var(--font-Color);
+    background-color: var(--font-color);
     color: var(--mainColor);
     transition: .4s;
     margin-top: 30px;
@@ -122,4 +181,14 @@ nav .links a:hover{
     opacity: .8;
 }
 
+@media(max-width:767px)
+{
+    .text{
+        padding-left: 20px;
+    }
+    .image{
+        display: none;
+    }
+}
 /* End Landing  */
+
