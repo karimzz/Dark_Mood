@@ -1,0 +1,125 @@
+
+
+
+/* Start Global Rule */
+*{
+    padding: 0 ; 
+    margin: 0 ;
+    box-sizing: border-box
+}
+
+:root{
+    --mainColor : #ffffff ; 
+    --font-Color :  #000000;
+    --secondColor :#ff4320 ;
+}
+
+.container{
+    width: 80% ;
+    margin: 0 auto
+}
+
+@media(max-width:767px)
+{
+    .container{
+        width: 100%
+    }
+}
+
+main{
+    background-color: var(--mainColor) ;
+    transition: .4s;
+    height: 100vh;
+}
+
+/* End Global Rule */
+
+
+
+
+/* Start Nav  */
+
+nav{
+    background-color: transparent;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px ;
+}
+
+nav .links{
+    display: flex;
+    align-items: center;
+    list-style: none;
+}
+
+nav .links li{
+    margin-right: 40px;
+}
+nav .logo{
+    color: var(--font-Color);
+    cursor: pointer;
+}
+
+nav .links a{
+    text-decoration: none;
+    color: var(--font-Color);
+    transition: .4s;
+}
+
+nav .links a:hover{
+    color: var(--secondColor);
+}
+
+/* End Nav  */
+
+
+
+/* Start Landing  */
+
+.landing{
+    background-color: transparent;
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    padding-top: 120px;
+}
+
+.landing .image img {
+    width: 300px;
+}
+.landing .text{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 600px;
+}
+
+.landing .text h2{
+    font-size: 33px;
+    margin-bottom: 30px;
+}
+
+.landing .text p{
+    font-weight: 300;
+    
+}
+
+.landing .text .btn{
+    width: 140px;
+    padding: 8px 7px;
+    border-radius: 5px;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+    background-color: var(--font-Color);
+    color: var(--mainColor);
+    transition: .4s;
+    margin-top: 30px;
+}
+
+.landing .text .btn:hover{
+    opacity: .8;
+}
+
+/* End Landing  */
